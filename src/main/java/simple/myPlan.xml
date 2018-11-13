@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ASCII"?>
+<LifePlan xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="tasmanMarshall" xmi:id="_eE-QAMqYEeiX4ZRvefAUrA">
+  <person xmi:id="_3eMKsL8WEeiNHqqZc8Og7g" firstName="Tasman" lastName="Marshall" age="27" gender="Male"/>
+  <goals xmi:id="_yojnEL3aEeiNHqqZc8Og7g" name="Perfection by Trial and Growth" tags="_RHQ3IL3ZEeiNHqqZc8Og7g" subGoals="_6iZRIL3aEeiNHqqZc8Og7g"/>
+  <goals xmi:id="_6iZRIL3aEeiNHqqZc8Og7g" name="SAS" tags="_jaeccMqVEeiX4ZRvefAUrA" subGoals="_A9LjQL3bEeiNHqqZc8Og7g _oYnhkL_5EeiNHqqZc8Og7g _3vkdcL_5EeiNHqqZc8Og7g"/>
+  <goals xmi:id="__G-2oL3aEeiNHqqZc8Og7g" name="Ironman" subGoals="_ibd4kL_3EeiNHqqZc8Og7g _ZlcdoL_4EeiNHqqZc8Og7g _XNFfIL_4EeiNHqqZc8Og7g">
+    <completionDates xmi:id="_ONRgUL3bEeiNHqqZc8Og7g">
+      <startDate xmi:id="_PJdbwL3bEeiNHqqZc8Og7g" day="1" month="1" year="2019"/>
+      <endDate xmi:id="_S6yYUL3bEeiNHqqZc8Og7g" day="365" year="2018"/>
+    </completionDates>
+  </goals>
+  <goals xmi:id="_A9LjQL3bEeiNHqqZc8Og7g" name="Godzone" subGoals="__G-2oL3aEeiNHqqZc8Og7g _oY-_QL3bEeiNHqqZc8Og7g"/>
+  <goals xmi:id="_oY-_QL3bEeiNHqqZc8Og7g" identifier="" name="Coast to Coast"/>
+  <goals xmi:id="_wDOHEL3bEeiNHqqZc8Og7g" name="Do my bit">
+    <objectives xmi:id="_RIBeAL_7EeiNHqqZc8Og7g" name="Get up at the planned time daily" specific="Get up at the planned time" measure="time out of bed" time="daily" repeat="true" repeatTimeScale="1"/>
+    <objectives xmi:id="_yLoo4L_7EeiNHqqZc8Og7g" identifier="" name="Keep my stuff tidy" specific="Tidy my belongings " measure="no belongings randomly placed in room" time="daily" repeat="true" repeatTimeScale="1"/>
+    <objectives xmi:id="_BjlDQL_8EeiNHqqZc8Og7g" name="Have a preference for food" specific="Know what type of food I would like or where I would like to go" measure="when topic comes up I have an idea of what I want" time="daily" repeat="true" repeatTimeScale="1"/>
+  </goals>
+  <goals xmi:id="_1wgf4L8hEeiNHqqZc8Og7g" identifier="" name="Build relationships to last a lifetime" subGoals="_YBJXAMFxEeiNHqqZc8Og7g _Z86gYMqWEeiX4ZRvefAUrA"/>
+  <goals xmi:id="_ibd4kL_3EeiNHqqZc8Og7g" name="Competitive runner" subGoals="_ItfzoL_5EeiNHqqZc8Og7g"/>
+  <goals xmi:id="_XNFfIL_4EeiNHqqZc8Og7g" name="Competitive Biker"/>
+  <goals xmi:id="_ZlcdoL_4EeiNHqqZc8Og7g" name="Competitive Swimmer"/>
+  <goals xmi:id="_ItfzoL_5EeiNHqqZc8Og7g" name="8m 2.4km" subGoals="_R6DCwL_5EeiNHqqZc8Og7g"/>
+  <goals xmi:id="_R6DCwL_5EeiNHqqZc8Og7g" name="5m20s 1.6km"/>
+  <goals xmi:id="_oYnhkL_5EeiNHqqZc8Og7g" name="80 Push Ups">
+    <completionDates xmi:id="_OzF-IMQFEeiqu6iQDvgFVA">
+      <startDate xmi:id="_PnHcEMQFEeiqu6iQDvgFVA" day="25" month="9" year="2018"/>
+      <endDate xmi:id="_S7YCIMQFEeiqu6iQDvgFVA" day="31" month="12" year="2018"/>
+    </completionDates>
+    <objectives xmi:id="_BEFzUMGbEeiNHqqZc8Og7g" name="20-100-80-60 pups" type="" specific="relative press up routine" measure="numbrer of push ups" time="4 weeks on, 1 week off" repeat="true" repeatTimeScale="7" report="_8pUi0MI3EeiNHqqZc8Og7g">
+      <completionDates xmi:id="_j20ycMGbEeiNHqqZc8Og7g">
+        <startDate xmi:id="_tpGk0MGbEeiNHqqZc8Og7g" day="25" month="9" year="2018"/>
+        <endDate xmi:id="_zqOZwMGbEeiNHqqZc8Og7g" day="31" month="10" year="2018"/>
+      </completionDates>
+    </objectives>
+    <mileStones xmi:id="_NH3OUMI3EeiNHqqZc8Og7g" name="70 push ups">
+      <completionMeasure xmi:id="_OFmB4MI3EeiNHqqZc8Og7g" completionValue="70"/>
+    </mileStones>
+    <mileStones xmi:id="_VdqboMI3EeiNHqqZc8Og7g" name="60 push ups">
+      <completionMeasure xmi:id="_Xcp34MI3EeiNHqqZc8Og7g" completionValue="60"/>
+    </mileStones>
+    <mileStones xmi:id="_dLUD0MI3EeiNHqqZc8Og7g" name="50 push ups">
+      <completionMeasure xmi:id="_gERN8MI3EeiNHqqZc8Og7g" completionValue="50"/>
+    </mileStones>
+    <progressReports xmi:id="_8pUi0MI3EeiNHqqZc8Og7g" objectiveAchieved="true" objective="_BEFzUMGbEeiNHqqZc8Og7g" progressValue="30">
+      <reportDate xmi:id="_FvdA4MI4EeiNHqqZc8Og7g" day="25" month="9" year="2018"/>
+    </progressReports>
+  </goals>
+  <goals xmi:id="_3vkdcL_5EeiNHqqZc8Og7g" name="25 Pull Ups">
+    <mileStones xmi:id="_mn2PsMI3EeiNHqqZc8Og7g" name="20 pull ups">
+      <completionMeasure xmi:id="_pwh34MI3EeiNHqqZc8Og7g" completionValue="20"/>
+    </mileStones>
+  </goals>
+  <goals xmi:id="_p14vgMFnEeiNHqqZc8Og7g" name="Achieve passions and dreams" subGoals="_8dHrMMF5EeiNHqqZc8Og7g _ZPCXYMF6EeiNHqqZc8Og7g _Al1SMMFoEeiNHqqZc8Og7g _NBr_0MFxEeiNHqqZc8Og7g _hrrFYMqiEeiX4ZRvefAUrA _mwlmMMqhEeiX4ZRvefAUrA _yRzmoMqhEeiX4ZRvefAUrA"/>
+  <goals xmi:id="_Al1SMMFoEeiNHqqZc8Og7g" name="Memory"/>
+  <goals xmi:id="_NBr_0MFxEeiNHqqZc8Og7g" name="BBall"/>
+  <goals xmi:id="_RIjHgMFxEeiNHqqZc8Og7g" identifier="" name="Make a small product line for something"/>
+  <goals xmi:id="_YBJXAMFxEeiNHqqZc8Og7g" name="A great love" tags="_QS2XoL3ZEeiNHqqZc8Og7g" subGoals="_43HloL3bEeiNHqqZc8Og7g _JOw4EM23EeiX4ZRvefAUrA"/>
+  <goals xmi:id="_8dHrMMF5EeiNHqqZc8Og7g" name="Create a business" subGoals="_RIjHgMFxEeiNHqqZc8Og7g _OWxNUMF6EeiNHqqZc8Og7g _jN3KcMGaEeiNHqqZc8Og7g"/>
+  <goals xmi:id="_OWxNUMF6EeiNHqqZc8Og7g" name="Make and sell some interesting cuff links"/>
+  <goals xmi:id="_ZPCXYMF6EeiNHqqZc8Og7g" name="Write a fantasy book" tags="_jaeccMqVEeiX4ZRvefAUrA"/>
+  <goals xmi:id="_jN3KcMGaEeiNHqqZc8Og7g" name="BBall analysis application" tags="_jaeccMqVEeiX4ZRvefAUrA"/>
+  <goals xmi:id="_0IhHEMqVEeiX4ZRvefAUrA" name="Have a fun holiday with Levi, Lisa, Gracen and Maddox">
+    <completionDates xmi:id="_45CPwMqVEeiX4ZRvefAUrA">
+      <startDate xmi:id="_5phRgMqVEeiX4ZRvefAUrA" day="5" month="10" year="2018"/>
+      <endDate xmi:id="_9F4qsMqVEeiX4ZRvefAUrA" day="11" month="10" year="2018"/>
+    </completionDates>
+  </goals>
+  <goals xmi:id="_Z86gYMqWEeiX4ZRvefAUrA" name="A close family" subGoals="_0IhHEMqVEeiX4ZRvefAUrA"/>
+  <goals xmi:id="_mwlmMMqhEeiX4ZRvefAUrA" name="Build a self generating side income" tags="_jaeccMqVEeiX4ZRvefAUrA" subGoals="_OWxNUMF6EeiNHqqZc8Og7g"/>
+  <goals xmi:id="_yRzmoMqhEeiX4ZRvefAUrA" name="Speak a second language"/>
+  <goals xmi:id="_0QmOkMqhEeiX4ZRvefAUrA" name="Perfect my 3 point shot"/>
+  <goals xmi:id="_hrrFYMqiEeiX4ZRvefAUrA" name="Build a perfect education system" tags="_jaeccMqVEeiX4ZRvefAUrA" subGoals="_0QmOkMqhEeiX4ZRvefAUrA _Q8t_UMqjEeiX4ZRvefAUrA"/>
+  <goals xmi:id="_Q8t_UMqjEeiX4ZRvefAUrA" name="Teach other to perfect their shot"/>
+  <goals xmi:id="_JOw4EM23EeiX4ZRvefAUrA" name="Keep in touch with Emily every day">
+    <completionDates xmi:id="_NDiKMM23EeiX4ZRvefAUrA">
+      <startDate xmi:id="_SKI3oM23EeiX4ZRvefAUrA" day="13" month="10" year="2018"/>
+      <endDate xmi:id="_OmCewM23EeiX4ZRvefAUrA" day="22" month="12" year="2018"/>
+    </completionDates>
+    <objectives xmi:id="_DDnvAM24EeiX4ZRvefAUrA" name="Facebook Emily daily with how day went and atleast one new thing; also ask about something emily is dealing with"/>
+  </goals>
+  <tags xmi:id="_QS2XoL3ZEeiNHqqZc8Og7g" name="Love" taggedGoals="_YBJXAMFxEeiNHqqZc8Og7g"/>
+  <tags xmi:id="_QtHRwL3ZEeiNHqqZc8Og7g" name="Family and Friends "/>
+  <tags xmi:id="_RHQ3IL3ZEeiNHqqZc8Og7g" name="Passions" taggedGoals="_yojnEL3aEeiNHqqZc8Og7g"/>
+  <tags xmi:id="_lKWeoMqVEeiX4ZRvefAUrA" name="Bottom 20"/>
+  <tags xmi:id="_jaeccMqVEeiX4ZRvefAUrA" name="Top 5" taggedGoals="_6iZRIL3aEeiNHqqZc8Og7g _ZPCXYMF6EeiNHqqZc8Og7g _jN3KcMGaEeiNHqqZc8Og7g _mwlmMMqhEeiX4ZRvefAUrA _hrrFYMqiEeiX4ZRvefAUrA"/>
+  <tags xmi:id="_r7zu4MqWEeiX4ZRvefAUrA" name="Top 25"/>
+  <tagGroups xmi:id="_NOw7kL3ZEeiNHqqZc8Og7g" name="Three Pillars" description="The three pillars of life" tags="_QtHRwL3ZEeiNHqqZc8Og7g _QS2XoL3ZEeiNHqqZc8Og7g _RHQ3IL3ZEeiNHqqZc8Og7g _jaeccMqVEeiX4ZRvefAUrA"/>
+  <tagGroups xmi:id="_oUhUkMqVEeiX4ZRvefAUrA" name="5/25" tags="_lKWeoMqVEeiX4ZRvefAUrA _jaeccMqVEeiX4ZRvefAUrA"/>
+  <archive xmi:id="_ZkBTsMqgEeiX4ZRvefAUrA">
+    <goals xmi:id="_43HloL3bEeiNHqqZc8Og7g" name="Have a great trip with Emily" subGoals="_wDOHEL3bEeiNHqqZc8Og7g">
+      <completionDates xmi:id="_8xGH4L3bEeiNHqqZc8Og7g">
+        <startDate xmi:id="_9c2aoL3bEeiNHqqZc8Og7g" day="21" month="9" year="2018"/>
+        <endDate xmi:id="__6-p8L3bEeiNHqqZc8Og7g" day="3" month="10" year="2018"/>
+      </completionDates>
+      <objectives xmi:id="_CwDZoL3cEeiNHqqZc8Og7g" name="Plan what I want to do daily" type="" specific="Google where we are for the day and select things I want to do" measure="List with atleast 3 things I want to do" time="Day before" repeat="true" repeatTimeScale="1">
+        <completionDates xmi:id="_EWD3QMW1Eeiqu6iQDvgFVA">
+          <startDate xmi:id="_FQuIsMW1Eeiqu6iQDvgFVA" day="21" month="9" year="2018"/>
+          <endDate xmi:id="_Hj7hcMW1Eeiqu6iQDvgFVA" day="1" month="1" year="2020"/>
+        </completionDates>
+      </objectives>
+    </goals>
+  </archive>
+</LifePlan>
