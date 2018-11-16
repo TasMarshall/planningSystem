@@ -1,5 +1,5 @@
 
-var dateFormatSpecifier = '%m/%d/%Y';
+var dateFormatSpecifier = '%d/%m/%Y';
 var dateFormat = d3.timeFormat(dateFormatSpecifier);
 var parseTime = d3.timeParse("%d %m %y");
 
