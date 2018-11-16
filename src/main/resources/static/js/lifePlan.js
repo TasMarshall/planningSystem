@@ -1,94 +1,148 @@
 
-d3.xml("http://localhost:8090/lifePlan/xml", function(error, data) {
+var dateFormatSpecifier = '%m/%d/%Y';
+var dateFormat = d3.timeFormat(dateFormatSpecifier);
+var parseTime = d3.timeParse("%d %m %y");
 
-   if (error) throw error;
+var ndx = crossfilter();
 
-   data = [].map.call(data.querySelectorAll("goals"), function(letter) {
+var chart = dc.dataTable("#simpleTable");
+var pieChart = dc.pieChart("#statusPieChart");
 
-     console.log(letter);
-     console.log(letter.getAttribute("name"));
+var goalData;
+var personData;
 
-     return {
 
-       letter: letter.getAttribute("name")
+/////////////////
+// DATA STRUCT //
+/////////////////
 
-     };
+    //Unique ID dimension
+var idDim= ndx.dimension(function (d) {
+    return d.id;
+});
+var grouping = function (d) {   return d.length;    };
 
-   });
+    //Date Dimension
+var trialDim = ndx.dimension(function(d) {
+    var state;
+    if (isUndefined(d.dates[0])){
+        state = 'n.d.';
+    }
+    else if (d.dates[0].length <1){
+        state = 'n.d.';
+    }
+    else if (d.dates[0].endDate[0].date < new Date()) {
+        state = "Expired";
+    }
+    else if ((d.dates[0].startDate[0].date < new Date()) && (d.dates[0].endDate[0].date > new Date())) {
+        state = "Active";
+    }
+    else {
+        state = "Upcoming";
+    }
+    return state;
+});
 
-   // create table
-  var table = d3.select('body')
-      .append('table');
+var dateGroup = trialDim.group();
 
-  var header = table.append("thead").append("tr");
-  header
-      .selectAll("th")
-      .data(["Hi"])
-      .enter()
-      .append("th")
-      .text(function(d) { return d; });
-  // create table body
-  var body = table.append('tbody')
-      .selectAll('tr')
-      .data(data).enter()
-      .append('tr')
-      .selectAll('td')
-      .data(function(d) {
-                console.log(d.letter);
-                return d.letter;
+//////////////////////////
+// SIMPLE TABLE DISPLAY //
+//////////////////////////
+
+chart
+    .dimension(idDim)
+    .group(grouping)
+    .columns([
+        'id',
+        'desc',
+        {
+            label: "Start Date",
+            format: function (d) {
+                return ((d.dates.length>0) ? dateFormat(d.dates[0].startDate[0].date) : "");
+            }
+        },
+        {
+            label: "End Date",
+            format: function (d) {
+                return ((d.dates.length>0) ? dateFormat(d.dates[0].endDate[0].date) : "");
+            }
+        },
+        'tags'
+     ])
+
+chart.render();
+
+
+///////////////////////
+// PIE CHART DISPLAY //
+///////////////////////
+
+pieChart
+    .width(768)
+    .height(480)
+    .radius(120)
+    .innerRadius(70)
+    .dimension(trialDim)
+    .group(dateGroup)
+    ;
+
+pieChart.render();
+
+////////////////
+// PARSE DATA //
+////////////////
+
+d3.xml("http://localhost:8090/lifePlan/xml").then(function(data) {
+
+
+    goalData = [].map.call(data.querySelectorAll("goals"), function(d) {
+
+        return {
+            id : d.getAttribute("xmi:id"),
+            desc: d.getAttribute("name"),
+            subGoals: d.getAttribute("subGoals"),
+            tags: d.getAttribute("tags"),
+            dates : [].map.call(d.querySelectorAll("completionDates"), function(e) {
+                return{
+                    startDate: [].map.call(e.querySelectorAll("startDate"), function(f) {
+                         return {
+                              date : parseTime(f.getAttribute("day") + " " + f.getAttribute("month") + " " + f.getAttribute("year").slice(-2))
+                         }
+                    }),
+                    endDate: [].map.call(e.querySelectorAll("endDate"), function(g) {
+                        return {
+                             date : parseTime(g.getAttribute("day") + " " + g.getAttribute("month") + " " + g.getAttribute("year").slice(-2))
+                        }
+                    })
+
+                }
+
             })
-      .enter()
-      .append("td")
-      .text(function(d) {
-          return d;
-      });
+        };
+    });
 
-   /*var margin = {top: 20, right: 20, bottom: 30, left: 40},
-       width = 960 - margin.left - margin.right,
-       height = 500 - margin.top - margin.bottom;
+    personData = [].map.call(data.querySelectorAll("person"), function(d) {
+        return {
+            firstName : d.getAttribute("firstName"),
+            lastName : d.getAttribute("lastName"),
+            age : d.getAttribute("age"),
+            gender : d.getAttribute("gender")
+         };
+    });
 
-   var x = d3.scale.ordinal()
-       .rangeRoundBands([0, width], .1);
+    ndx.add(goalData);
 
-   var y = d3.scale.linear()
-       .range([height, 0]);
+    dc.redrawAll();
 
-   var xAxis = d3.svg.axis()
-       .scale(x)
-       .orient("bottom");
+});
 
-   var yAxis = d3.svg.axis()
-       .scale(y)
-       .orient("left");
+function isUndefined(value){
+    // Obtain `undefined` value that's
+    // guaranteed to not have been re-assigned
+    var undefined = void(0);
+    return value === undefined;
+}
 
-   var svg = d3.select("body").append("svg")
-       .attr("width", width + margin.left + margin.right)
-       .attr("height", height + margin.top + margin.bottom)
-     .append("g")
-       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-   x.domain(data.map(function(d) { return d.letter; }));
-   y.domain(data.map(function(d) { return d.letter; }));
-
-   svg.append("g")
-       .attr("class", "x axis")
-       .attr("transform", "translate(0," + height + ")")
-       .call(xAxis);
-
-   svg.append("g")
-       .attr("class", "y axis")
-       .call(yAxis)
-     .append("text")
-       .attr("transform", "rotate(-90)")
-       .attr("y", 6)
-       .attr("dy", ".71em")
-       .style("text-anchor", "end")
-       .text("Frequency");*/
-
- });
-
-      /*
-
-
-
-    });*/
+function isDate(myDate) {
+    return myDate.constructor.toString().indexOf("Date") > -1;
+}

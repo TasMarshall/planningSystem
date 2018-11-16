@@ -16,14 +16,4 @@ public class SimpleXMLEndPointApp {
 
     }
 
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurerAdapter() {
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/simpleLifePlanString").allowedOrigins("http://localhost:8090");
-            }
-        };
-    }
-
 }
