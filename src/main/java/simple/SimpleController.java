@@ -14,17 +14,17 @@ public class SimpleController {
 
     @RequestMapping(value="/lifePlan/xml", method=RequestMethod.GET, produces=MediaType.APPLICATION_XML_VALUE)
     public String sayHi() throws IOException {
-        String text = "";
+        String xmlOutput = "";
 
         try {
-            text = new String(Files.readAllBytes(Paths.get("C:\\Users\\tjtma\\swePro\\src\\main\\java\\simple\\myPlan.xml")));
+            xmlOutput = new String(Files.readAllBytes(Paths.get("C:\\Users\\tjtma\\swePro\\src\\main\\java\\simple\\myPlan.model")));
         } catch (IOException e) { e.printStackTrace(); }
 
 
-        XMLFormatter.format(text);
+        XMLFormatter.format(xmlOutput);
 
         //Returns XML
-        return (text);
+        return (xmlOutput);
     }
 
 }
